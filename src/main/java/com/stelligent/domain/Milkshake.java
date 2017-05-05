@@ -1,7 +1,7 @@
 package com.stelligent.domain;
 
+import com.stelligent.service.Flavor;
 import org.springframework.hateoas.Identifiable;
-import java.time.LocalDateTime;
 
 /**
  * Domain model representing the Milkshake object
@@ -10,9 +10,6 @@ public class Milkshake implements Identifiable<Long>{
   private Long id;
   private Flavor flavor;
 
-  public enum Flavor {
-    Banana
-  }
 
   public Long getId() {
     return id;
