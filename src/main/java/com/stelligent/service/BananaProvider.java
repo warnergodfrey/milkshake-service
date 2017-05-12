@@ -44,7 +44,7 @@ public class BananaProvider implements FlavorProvider {
             new ParameterizedTypeReference<List<Map<String, Object>>>() {};
 
     ResponseEntity<List<Map<String, Object>>> exchange =
-            this.restTemplate.exchange("http://BananaService/bananas",
+            this.restTemplate.exchange("http://banana-service/bananas",
                     HttpMethod.GET,null, typeRef);
 
     return exchange.getBody();
@@ -58,7 +58,6 @@ public class BananaProvider implements FlavorProvider {
             .findFirst()
             .get();
     URI uri = URI.create(url);
-    System.err.println("--->"+uri.getPath());
-    this.restTemplate.delete("http://BananaService/{path}",uri.getPath());
+    this.restTemplate.delete("http://banana-service/{path}",uri.getPath());
   }
 }
