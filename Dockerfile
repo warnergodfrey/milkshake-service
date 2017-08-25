@@ -1,4 +1,4 @@
-FROM java:8
+FROM openjdk:8u131
 MAINTAINER Casey Lee "casey.lee@stelligent.com"
 ADD build/libs/milkshake-service.jar app.jar
 
