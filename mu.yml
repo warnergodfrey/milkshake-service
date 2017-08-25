@@ -1,6 +1,7 @@
 service:
   name: milkshake-service
   port: 8080
+  cpu: 200
   hostPatterns:
   - milkshake.*
   pipeline:
