@@ -2,7 +2,7 @@ service:
   name: milkshake-service
   port: 8080
   hostPatterns:
-  - milkshake*
+  - milkshake.*
   pipeline:
     source:
       provider: CodeCommit
