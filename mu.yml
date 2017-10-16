@@ -11,4 +11,5 @@ service:
       repo: milkshake-service
     build:
       image: aws/codebuild/java:openjdk-8
-
+    production:
+      disabled: true
