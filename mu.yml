@@ -20,7 +20,7 @@ service:
   port: 8080
   desiredCount: 1
   pathPatterns:
-  - /milkshake/*
+  - /milkshakes/*
   pipeline:
     source:
       provider: GitHub
