@@ -1,15 +1,30 @@
+environments:
+- name: acceptance
+  discovery:
+    provider: consul
+  loadbalancer:
+    hostedzone: aws.godfrey.io
+  cluster:
+    keyName: Warner
+    desiredCapacity: 1
+- name: production
+  discovery:
+    provider: consul
+  loadbalancer:
+    hostedzone: aws.godfrey.io
+  cluster:
+    keyName: Warner
+    desiredCapacity: 1
 service:
-  name: milkshake-service
+  name: milkshake
   port: 8080
   cpu: 256
   memory: 512
-  hostPatterns:
-  - milkshake.*
+  pathPatterns:
+  - /milkshake/*
   pipeline:
     source:
-      provider: CodeCommit
-      repo: milkshake-service
+      provider: GitHub
+      repo: warnergodfrey/milkshake-service
     build:
       image: aws/codebuild/java:openjdk-8
-    production:
-      disabled: true
