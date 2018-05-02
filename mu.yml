@@ -18,8 +18,7 @@ environments:
 service:
   name: milkshake
   port: 8080
-  cpu: 256
-  memory: 512
+  desiredCount: 1
   pathPatterns:
   - /milkshake/*
   pipeline:
