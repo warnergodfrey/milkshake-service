@@ -27,3 +27,5 @@ service:
       repo: warnergodfrey/milkshake-service
     build:
       image: aws/codebuild/java:openjdk-8
+extensions:
+- url: mu-consul-agent
