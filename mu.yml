@@ -28,4 +28,4 @@ service:
     build:
       image: aws/codebuild/java:openjdk-8
 extensions:
-- url: mu-consul-agent
+- url: https://github.com/warnergodfrey/mu-consul-agent/archive/v0.1.zip
